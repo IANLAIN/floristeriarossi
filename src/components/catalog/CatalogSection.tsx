@@ -1,14 +1,17 @@
 import { useCatalogFilters } from '../../hooks/useCatalogFilters'
+import { useImageLightbox } from '../../hooks/useImageLightbox'
 import SectionHeading from '../common/SectionHeading'
 import CategoryFilter from './CategoryFilter'
 import CatalogGrid from './CatalogGrid'
+import ImageModal from './ImageModal'
 
 function CatalogSection() {
   const { categories, activeCategory, filteredProducts, activeCategoryLabel, setActiveCategory } =
     useCatalogFilters()
+  const { selectedImage, openImage, closeImage } = useImageLightbox()
 
   return (
-    <section id="catalogo" className="container-page py-16 sm:py-20">
+    <section id="catalogo" className="container-page py-16 text-center sm:py-20">
       <SectionHeading
         eyebrow="Catálogo"
         title="Nuestros diseños florales"
@@ -29,8 +32,9 @@ function CatalogSection() {
       </p>
 
       <div className="mt-6">
-        <CatalogGrid products={filteredProducts} />
+        <CatalogGrid products={filteredProducts} onImageClick={openImage} />
       </div>
+      <ImageModal image={selectedImage} onClose={closeImage} />
     </section>
   )
 }

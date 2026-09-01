@@ -1,9 +1,9 @@
-import { Flower2 } from 'lucide-react'
+import { LoaderCircle } from 'lucide-react'
 
 function PageLoader() {
   return (
     <div className="flex min-h-[50vh] items-center justify-center">
-      <Flower2 className="h-10 w-10 animate-pulse text-secondary" />
+      <LoaderCircle className="h-9 w-9 animate-spin text-primary" aria-label="Cargando" />
     </div>
   )
 }

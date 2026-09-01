@@ -1,9 +1,10 @@
 import { lazy, Suspense } from 'react'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import PageLoader from './components/common/PageLoader'
 
-const Hero = lazy(() => import('./components/Hero'))
-const CatalogSection = lazy(() => import('./components/catalog/CatalogSection'))
+const Home = lazy(() => import('./views/Home'))
+const Catalog = lazy(() => import('./views/Catalog'))
 const Footer = lazy(() => import('./components/layout/Footer'))
 
 function App() {
@@ -16,11 +17,11 @@ function App() {
       }
     >
       <Suspense fallback={<PageLoader />}>
-        <Hero />
-      </Suspense>
-
-      <Suspense fallback={<PageLoader />}>
-        <CatalogSection />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/catalogo" element={<Catalog />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </Suspense>
     </MainLayout>
   )
