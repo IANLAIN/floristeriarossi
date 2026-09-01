@@ -1,5 +1,3 @@
-// Archivo generado automáticamente por scripts/generate-catalog.mjs.
-// NO EDITAR A MANO. Regenera con: npm run assets:generate
 import type { Category, ContactInfo, Product } from '../types/catalog'
 
 export const CONTACT: ContactInfo = {
@@ -19,7 +17,7 @@ export const CATEGORIES: Category[] = [
   {"id":"engalanados","label":"Engalanados"},
   {"id":"fruteros","label":"Fruteros"},
   {"id":"funebres","label":"Fúnebres"},
-  {"id":"funebres-en-piana","label":"Fúnebres en Piña"},
+  {"id":"funebres-en-piana","label":"Fúnebres en Piaña"},
   {"id":"toda-ocasion","label":"Toda Ocasión"}
 ]
 
