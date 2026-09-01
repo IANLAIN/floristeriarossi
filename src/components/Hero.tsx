@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle } from 'lucide-react'
+import { ArrowRight, Instagram, MessageCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Button from './ui/Button'
 
@@ -23,26 +23,38 @@ function Hero() {
             Arreglos florales para toda ocación.
           </h1>
 
-          <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-neutral-700 sm:text-lg">
+          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-neutral-700 sm:text-lg">
             Diseños florales artesanales para celebraciones, arreglos con estilo y detalles que
             cuentan historias en Cartago, Valle del Cauca.
           </p>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mx-auto mt-8 flex w-full max-w-xs flex-col items-center gap-4">
             <Link to="/catalogo">
-              <Button size="lg" className="shadow-soft">
+              <Button size="lg" className="w-full shadow-soft">
                 Ver catálogo
                 <ArrowRight className="h-5 w-5" />
               </Button>
             </Link>
 
-            <Link
-              to="/contacto"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary bg-white/70 px-7 py-3.5 text-base font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white"
+            <a
+              href="https://wa.me/573205851765"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 font-semibold text-white transition-all duration-300 hover:bg-accent-dark"
             >
               <MessageCircle className="h-5 w-5" />
-              Contactanos
-            </Link>
+              WhatsApp
+            </a>
+
+            <a
+              href="https://www.instagram.com/floristeriarossi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border-2 border-primary bg-white/80 px-7 py-3.5 font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white"
+            >
+              <Instagram className="h-5 w-5" />
+              Instagram
+            </a>
           </div>
         </div>
       </div>
