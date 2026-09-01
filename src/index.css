@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-neutral-800 antialiased;
+    background-image: radial-gradient(circle at top, rgba(232, 162, 176, 0.10), transparent 28%),
+      linear-gradient(180deg, rgba(251, 247, 240, 1), rgba(248, 242, 234, 1));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif text-primary-dark;
+  }
+
+  img {
+    @apply max-w-full align-middle;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .brand-badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white/80 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary shadow-soft backdrop-blur-sm;
+  }
+}
