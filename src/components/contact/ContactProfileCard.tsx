@@ -21,6 +21,10 @@ function ContactProfileCard({ profile }: ContactProfileCardProps) {
           <img
             src={assetUrl(profile.photo)}
             alt={profile.name}
+            loading="lazy"
+            decoding="async"
+            width="320"
+            height="320"
             className="h-full w-full object-cover"
             onError={() => setHasImageError(true)}
           />

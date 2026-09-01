@@ -10,6 +10,9 @@ function Hero() {
         <img
           src={assetUrl('/assets/images/banner.jpg')}
           alt="Arreglos florales"
+          width="1024"
+          height="1024"
+          fetchPriority="high"
           className="h-full w-full object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-background/75" />

@@ -26,6 +26,9 @@ function ProductCard({ product, onImageClick }: ProductCardProps) {
           src={assetUrl(product.image)}
           alt={product.name}
           loading="lazy"
+          decoding="async"
+          width="800"
+          height="800"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </button>

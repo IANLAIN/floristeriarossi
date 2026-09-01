@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
 import { Link, NavLink } from 'react-router-dom'
 
 const NAV_LINKS = [
@@ -9,14 +7,18 @@ const NAV_LINKS = [
 ]
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const closeMenu = () => setIsOpen(false)
-
   return (
-    <header className="sticky top-0 z-50 border-b border-primary/10 bg-background/90 backdrop-blur-md">
-      <nav className="container-page flex h-20 items-center justify-center">
-        <div className="hidden items-center justify-center gap-7 md:flex">
+    <header className="sticky top-3 z-50 px-3 sm:px-6">
+      <nav className="container-page flex min-h-16 flex-wrap items-center justify-center gap-4 rounded-2xl border border-white/70 bg-white/75 px-4 py-3 shadow-soft backdrop-blur-md sm:gap-8">
+        <Link
+          to="/"
+          className="font-serif text-2xl font-bold tracking-tight text-primary transition-colors hover:text-primary-light"
+          aria-label="Ir al inicio"
+        >
+          Rossi
+        </Link>
+
+        <div className="flex items-center justify-center gap-2 sm:gap-5">
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.href}
@@ -27,34 +29,7 @@ function Navbar() {
             </NavLink>
           ))}
         </div>
-
-        <button
-          type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-primary/10 bg-white/80 md:hidden"
-          onClick={() => setIsOpen((value) => !value)}
-          aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
-          aria-expanded={isOpen}
-        >
-          {isOpen ? <X className="h-5 w-5 text-primary" /> : <Menu className="h-5 w-5 text-primary" />}
-        </button>
       </nav>
-
-      {isOpen && (
-        <div className="border-t border-primary/10 bg-background md:hidden">
-          <nav className="container-page flex flex-col gap-1 py-4">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                onClick={closeMenu}
-                className="rounded-xl px-3 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary/5 hover:text-primary"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      )}
     </header>
   )
 }

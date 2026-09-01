@@ -36,7 +36,4 @@
     @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
-  .brand-badge {
-    @apply inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white/80 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary shadow-soft backdrop-blur-sm;
-  }
 }
