@@ -37,7 +37,7 @@ function ProductCard({ product, onImageClick }: ProductCardProps) {
           className="mt-auto w-full"
         >
           <MessageCircle className="h-4 w-4" />
-          Consultar Diseño
+          Consultar diseño
         </Button>
       </div>
     </article>

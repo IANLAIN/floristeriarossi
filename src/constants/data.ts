@@ -14,7 +14,7 @@ export const CONTACT: ContactInfo = {
 
 export const CONTACT_PROFILES: ContactProfile[] = [
   {
-    name: 'Cesár Cardona Giraldo',
+    name: 'César Cardona Giraldo',
     role: 'Florista',
     photo: '/assets/images/cesar.jpg',
     whatsapp: '573205851765',
@@ -37,7 +37,7 @@ export const CATEGORIES: Category[] = [
   {"id":"engalanados","label":"Engalanados"},
   {"id":"fruteros","label":"Fruteros"},
   {"id":"funebres","label":"Fúnebres"},
-  {"id":"funebres-en-piana","label":"Fúnebres en Piaña"},
+  {"id":"funebres-en-piana","label":"Fúnebres en Piña"},
   {"id":"toda-ocasion","label":"Toda Ocasión"}
 ]
 

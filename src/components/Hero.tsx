@@ -20,7 +20,7 @@ function Hero() {
       <div className="container-page relative flex max-w-3xl flex-col items-center py-16">
         <div>
           <h1 className="text-4xl leading-tight text-primary sm:text-5xl lg:text-6xl">
-            Arreglos florales para toda ocación.
+            Arreglos florales para toda ocasión.
           </h1>
 
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-neutral-700 sm:text-lg">
