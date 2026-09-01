@@ -37,7 +37,7 @@ export const CATEGORIES: Category[] = [
   {"id":"engalanados","label":"Engalanados"},
   {"id":"fruteros","label":"Fruteros"},
   {"id":"funebres","label":"Fúnebres"},
-  {"id":"funebres-en-piana","label":"Fúnebres en Piña"},
+  {"id":"funebres-en-piana","label":"Funebres en Piaña"},
   {"id":"toda-ocasion","label":"Toda Ocasión"}
 ]
 
