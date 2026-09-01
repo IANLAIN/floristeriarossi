@@ -171,91 +171,91 @@ export const PRODUCTS: Product[] = [
   {
     "id": "engalanados-01",
     "name": "Engalanado 01",
-    "image": "/assets/images/engalanados/img_20250724_094123_303.png",
+    "image": "/assets/images/engalanados/EN1.png",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-02",
     "name": "Engalanado 02",
-    "image": "/assets/images/engalanados/img_20250803_085004_415.png",
+    "image": "/assets/images/engalanados/EN2.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-03",
     "name": "Engalanado 03",
-    "image": "/assets/images/engalanados/img_20250924_180116_125.png",
+    "image": "/assets/images/engalanados/EN3.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-04",
     "name": "Engalanado 04",
-    "image": "/assets/images/engalanados/img_20260317_095933_333.jpg",
+    "image": "/assets/images/engalanados/EN4.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-05",
     "name": "Engalanado 05",
-    "image": "/assets/images/engalanados/img_20260425_133456_948.jpg",
+    "image": "/assets/images/engalanados/EN5.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-06",
     "name": "Engalanado 06",
-    "image": "/assets/images/engalanados/img_20260429_154956_975.png",
+    "image": "/assets/images/engalanados/EN6.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-07",
     "name": "Engalanado 07",
-    "image": "/assets/images/engalanados/img_20260717_174144_573.jpg",
+    "image": "/assets/images/engalanados/EN7.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-08",
     "name": "Engalanado 08",
-    "image": "/assets/images/engalanados/img_20260805_111503_702.jpg",
+    "image": "/assets/images/engalanados/EN8.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-09",
     "name": "Engalanado 09",
-    "image": "/assets/images/engalanados/photoroom-20240529_174001.png",
+    "image": "/assets/images/engalanados/EN9.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-10",
     "name": "Engalanado 10",
-    "image": "/assets/images/engalanados/photoroom-20240530_102547.png",
+    "image": "/assets/images/engalanados/EN10.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-11",
     "name": "Engalanado 11",
-    "image": "/assets/images/engalanados/photoroom-20241029_100123.png",
+    "image": "/assets/images/engalanados/EN11.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-12",
     "name": "Engalanado 12",
-    "image": "/assets/images/engalanados/photoroom-20241103_142404.png",
+    "image": "/assets/images/engalanados/EN12.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-13",
     "name": "Engalanado 13",
-    "image": "/assets/images/engalanados/photoroom-20241208_192429.png",
+    "image": "/assets/images/engalanados/EN13.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-14",
     "name": "Engalanado 14",
-    "image": "/assets/images/engalanados/photoroom-20250117_112723.png",
+    "image": "/assets/images/engalanados/EN14.jpg",
     "categoryId": "engalanados"
   },
   {
     "id": "engalanados-15",
     "name": "Engalanado 15",
-    "image": "/assets/images/engalanados/photoroom-20250220_120912.png",
+    "image": "/assets/images/engalanados/EN15.jpg",
     "categoryId": "engalanados"
   },
   {
