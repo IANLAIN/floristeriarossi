@@ -5,6 +5,7 @@ import PageLoader from './components/common/PageLoader'
 
 const Home = lazy(() => import('./views/Home'))
 const Catalog = lazy(() => import('./views/Catalog'))
+const Contact = lazy(() => import('./views/Contact'))
 const Footer = lazy(() => import('./components/layout/Footer'))
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalogo" element={<Catalog />} />
+          <Route path="/contacto" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

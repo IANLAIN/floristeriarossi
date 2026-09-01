@@ -1,4 +1,4 @@
-import type { Category, ContactInfo, Product } from '../types/catalog'
+import type { Category, ContactInfo, ContactProfile, Product } from '../types/catalog'
 
 export const CONTACT: ContactInfo = {
   whatsapp: "573205851765",
@@ -11,6 +11,26 @@ export const CONTACT: ContactInfo = {
     "Domingos: 8:30 AM a 12:00 M"
   ],
 }
+
+export const CONTACT_PROFILES: ContactProfile[] = [
+  {
+    name: 'Cesár Cardona Giraldo',
+    role: 'Florista',
+    photo: '/assets/images/cesar.jpg',
+    whatsapp: '573205851765',
+    whatsappDisplay: '3205851765',
+    instagram: 'https://www.instagram.com/ccgcesarprado/',
+    instagramHandle: 'ccgcesarprado',
+  },
+  {
+    name: 'Lucely Cardona Giraldo',
+    photo: '/assets/images/lucely.jpg',
+    whatsapp: '573136591946',
+    whatsappDisplay: '3136591946',
+    instagram: 'https://www.instagram.com/cardona_lucely/',
+    instagramHandle: 'cardona_lucely',
+  },
+]
 
 export const CATEGORIES: Category[] = [
   {"id":"bouquets","label":"Bouquets"},

@@ -1,11 +1,8 @@
 import { ArrowRight, MessageCircle } from 'lucide-react'
-import { buildWhatsAppLink } from '../utils/whatsapp'
-import Button from './ui/Button'
 import { Link } from 'react-router-dom'
+import Button from './ui/Button'
 
 function Hero() {
-  const whatsappLink = buildWhatsAppLink('Cotización general')
-
   return (
     <section className="relative isolate flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden bg-background text-center">
       <div className="absolute inset-0">
@@ -23,7 +20,7 @@ function Hero() {
       <div className="container-page relative flex max-w-3xl flex-col items-center py-16">
         <div>
           <h1 className="text-4xl leading-tight text-primary sm:text-5xl lg:text-6xl">
-            Flores hechas para el momento perfecto.
+            Arreglos florales para toda ocación.
           </h1>
 
           <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-neutral-700 sm:text-lg">
@@ -34,20 +31,18 @@ function Hero() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link to="/catalogo">
               <Button size="lg" className="shadow-soft">
-              Ver catálogo
-              <ArrowRight className="h-5 w-5" />
+                Ver catálogo
+                <ArrowRight className="h-5 w-5" />
               </Button>
             </Link>
 
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/contacto"
               className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary bg-white/70 px-7 py-3.5 text-base font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white"
             >
               <MessageCircle className="h-5 w-5" />
               Contactanos
-            </a>
+            </Link>
           </div>
         </div>
       </div>

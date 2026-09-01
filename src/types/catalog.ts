@@ -27,5 +27,15 @@ export interface ContactInfo {
   hours: string[]
 }
 
+export interface ContactProfile {
+  name: string
+  role?: string
+  photo: string
+  whatsapp: string
+  whatsappDisplay: string
+  instagram: string
+  instagramHandle: string
+}
+
 /** Categoría activa en el filtro: una categoría concreta o 'all' (todo el catálogo). */
 export type FilterValue = CategoryId | 'all'

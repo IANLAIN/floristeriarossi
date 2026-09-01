@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom'
 const NAV_LINKS = [
   { href: '/', label: 'Inicio' },
   { href: '/catalogo', label: 'Catálogo' },
-  { href: '/#contacto', label: 'Contacto' },
+  { href: '/contacto', label: 'Contacto' },
 ]
 
 function Navbar() {
