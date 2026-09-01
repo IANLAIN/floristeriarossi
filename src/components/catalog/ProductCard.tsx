@@ -1,5 +1,6 @@
 import { MessageCircle } from 'lucide-react'
 import type { Product } from '../../types/catalog'
+import { assetUrl } from '../../utils/assets'
 import { buildWhatsAppLink } from '../../utils/whatsapp'
 import Button from '../ui/Button'
 
@@ -22,7 +23,7 @@ function ProductCard({ product, onImageClick }: ProductCardProps) {
         aria-label={`Ampliar imagen de ${product.name}`}
       >
         <img
-          src={product.image}
+          src={assetUrl(product.image)}
           alt={product.name}
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

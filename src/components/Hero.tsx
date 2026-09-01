@@ -1,5 +1,6 @@
 import { ArrowRight, Instagram, MessageCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { assetUrl } from '../utils/assets'
 import Button from './ui/Button'
 
 function Hero() {
@@ -7,7 +8,7 @@ function Hero() {
     <section className="relative isolate flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden bg-background text-center">
       <div className="absolute inset-0">
         <img
-          src="/assets/images/banner.jpg"
+          src={assetUrl('/assets/images/banner.jpg')}
           alt="Arreglos florales"
           className="h-full w-full object-cover opacity-80"
         />

@@ -1,5 +1,6 @@
 import { X } from 'lucide-react'
 import type { LightboxImage } from '../../hooks/useImageLightbox'
+import { assetUrl } from '../../utils/assets'
 import Button from '../ui/Button'
 
 interface ImageModalProps {
@@ -31,7 +32,7 @@ function ImageModal({ image, onClose }: ImageModalProps) {
         <X className="h-5 w-5" />
       </Button>
       <img
-        src={image.src}
+        src={assetUrl(image.src)}
         alt={image.alt}
         className="max-h-[85vh] max-w-full rounded-xl object-contain shadow-2xl"
       />

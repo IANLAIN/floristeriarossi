@@ -1,6 +1,7 @@
 import { Instagram, MessageCircle } from 'lucide-react'
 import { useState } from 'react'
 import type { ContactProfile } from '../../types/catalog'
+import { assetUrl } from '../../utils/assets'
 
 interface ContactProfileCardProps {
   profile: ContactProfile
@@ -18,7 +19,7 @@ function ContactProfileCard({ profile }: ContactProfileCardProps) {
           </span>
         ) : (
           <img
-            src={profile.photo}
+            src={assetUrl(profile.photo)}
             alt={profile.name}
             className="h-full w-full object-cover"
             onError={() => setHasImageError(true)}

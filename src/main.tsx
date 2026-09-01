@@ -5,6 +5,7 @@ import App from './App'
 import './index.css'
 
 const rootElement = document.getElementById('root')
+const routerBasename = window.location.hostname === 'ianlain.github.io' ? '/floristeriarossi' : undefined
 
 if (!rootElement) {
   throw new Error('No se encontró el elemento raíz de la aplicación.')
@@ -12,7 +13,7 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <App />
     </BrowserRouter>
   </StrictMode>,
