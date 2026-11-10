@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { X } from 'lucide-react'
 import type { LightboxImage } from '../../hooks/useImageLightbox'
 import { assetUrl } from '../../utils/assets'
@@ -9,6 +10,19 @@ interface ImageModalProps {
 }
 
 function ImageModal({ image, onClose }: ImageModalProps) {
+  const closeButtonRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    if (!image) return
+
+    const previousFocusedElement = document.activeElement as HTMLElement | null
+    closeButtonRef.current?.focus()
+
+    return () => {
+      previousFocusedElement?.focus?.()
+    }
+  }, [image])
+
   if (!image) return null
 
   return (
@@ -22,11 +36,12 @@ function ImageModal({ image, onClose }: ImageModalProps) {
       }}
     >
       <Button
+        ref={closeButtonRef}
         type="button"
         variant="secondary"
         size="sm"
         onClick={onClose}
-        className="absolute right-4 top-4 z-10 h-11 w-11 rounded-full p-0"
+        className="absolute right-3 top-3 z-10 h-11 w-11 rounded-full p-0 sm:right-4 sm:top-4"
         aria-label="Cerrar imagen ampliada"
       >
         <X className="h-5 w-5" />
@@ -35,7 +50,7 @@ function ImageModal({ image, onClose }: ImageModalProps) {
         src={assetUrl(image.src)}
         alt={image.alt}
         decoding="async"
-        className="max-h-[85vh] max-w-full rounded-xl object-contain shadow-2xl"
+        className="max-h-[82dvh] max-w-full rounded-xl object-contain shadow-2xl sm:max-h-[85vh]"
       />
     </div>
   )

@@ -37,7 +37,7 @@ export const CATEGORIES: Category[] = [
   {"id":"engalanados","label":"Engalanados"},
   {"id":"fruteros","label":"Fruteros"},
   {"id":"funebres","label":"Fúnebres"},
-  {"id":"funebres-en-piana","label":"Funebres en Piaña"},
+  {"id":"funebres-en-piana","label":"Fúnebres en Piaña"},
   {"id":"toda-ocasion","label":"Toda Ocasión"}
 ]
 
@@ -452,79 +452,79 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "funebres-en-piana-01",
-    "name": "Arreglo en Piña 01",
+    "name": "Arreglo en Piaña 01",
     "image": "/assets/images/funebres-en-piana/img_20250319_091904_365.png",
     "categoryId": "funebres-en-piana"
   },
   {
     "id": "funebres-en-piana-02",
-    "name": "Arreglo en Piña 02",
+    "name": "Arreglo en Piaña 02",
     "image": "/assets/images/funebres-en-piana/img_20250909_163412_129.png",
     "categoryId": "funebres-en-piana"
   },
   {
     "id": "funebres-en-piana-03",
-    "name": "Arreglo en Piña 03",
+    "name": "Arreglo en Piaña 03",
     "image": "/assets/images/funebres-en-piana/img_20260428_105610_843.png",
     "categoryId": "funebres-en-piana"
   },
   {
     "id": "funebres-en-piana-04",
-    "name": "Arreglo en Piña 04",
+    "name": "Arreglo en Piaña 04",
     "image": "/assets/images/funebres-en-piana/img-20250422-wa0031.png",
     "categoryId": "funebres-en-piana"
   },
   {
     "id": "funebres-en-piana-05",
-    "name": "Arreglo en Piña 05",
+    "name": "Arreglo en Piaña 05",
     "image": "/assets/images/funebres-en-piana/img-20260402-wa0019.jpg.png",
     "categoryId": "funebres-en-piana"
   },
   {
     "id": "funebres-en-piana-06",
-    "name": "Arreglo en Piña 06",
+    "name": "Arreglo en Piaña 06",
     "image": "/assets/images/funebres-en-piana/photoroom-20240226_112514.png",
     "categoryId": "funebres-en-piana"
   },
   {
     "id": "funebres-en-piana-07",
-    "name": "Arreglo en Piña 07",
+    "name": "Arreglo en Piaña 07",
     "image": "/assets/images/funebres-en-piana/photoroom-20240302_193128.png",
     "categoryId": "funebres-en-piana"
   },
   {
     "id": "funebres-en-piana-08",
-    "name": "Arreglo en Piña 08",
+    "name": "Arreglo en Piaña 08",
     "image": "/assets/images/funebres-en-piana/photoroom-20240329_192544.png",
     "categoryId": "funebres-en-piana"
   },
   {
     "id": "funebres-en-piana-09",
-    "name": "Arreglo en Piña 09",
+    "name": "Arreglo en Piaña 09",
     "image": "/assets/images/funebres-en-piana/photoroom-20240412_112904.png",
     "categoryId": "funebres-en-piana"
   },
   {
     "id": "funebres-en-piana-10",
-    "name": "Arreglo en Piña 10",
+    "name": "Arreglo en Piaña 10",
     "image": "/assets/images/funebres-en-piana/photoroom-20240918_083440.png",
     "categoryId": "funebres-en-piana"
   },
   {
     "id": "funebres-en-piana-11",
-    "name": "Arreglo en Piña 11",
+    "name": "Arreglo en Piaña 11",
     "image": "/assets/images/funebres-en-piana/photoroom-20250213_122953.png",
     "categoryId": "funebres-en-piana"
   },
   {
     "id": "funebres-en-piana-12",
-    "name": "Arreglo en Piña 12",
+    "name": "Arreglo en Piaña 12",
     "image": "/assets/images/funebres-en-piana/screenshot_20260119-205416.png",
     "categoryId": "funebres-en-piana"
   },
   {
     "id": "funebres-en-piana-13",
-    "name": "Arreglo en Piña 13",
+    "name": "Arreglo en Piaña 13",
     "image": "/assets/images/funebres-en-piana/screenshot_20260323-203252.jpg.png",
     "categoryId": "funebres-en-piana"
   }

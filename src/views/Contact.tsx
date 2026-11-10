@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import ContactProfileCard from '../components/contact/ContactProfileCard'
 import SectionHeading from '../components/common/SectionHeading'
+import { getButtonClasses } from '../components/ui/Button'
 import { CONTACT_PROFILES } from '../constants/data'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 
@@ -22,7 +23,7 @@ function Contact() {
 
       <Link
         to="/catalogo"
-        className="mt-10 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-white transition-colors hover:bg-primary-dark"
+        className={getButtonClasses({ variant: 'primary', size: 'md', className: 'mt-10' })}
       >
         Ver catálogo
       </Link>

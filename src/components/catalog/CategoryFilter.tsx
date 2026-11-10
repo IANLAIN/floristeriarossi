@@ -30,7 +30,7 @@ function CategoryFilter({ categories, activeCategory, onChange }: CategoryFilter
             type="button"
             onClick={() => onChange(option.id)}
             aria-pressed={isActive}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 ${
+            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
               isActive
                 ? 'bg-primary text-white shadow-soft'
                 : 'bg-white text-primary hover:bg-primary/10'
