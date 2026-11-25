@@ -15,5 +15,8 @@ export function buildWhatsAppUrl(phone: string = CONTACT.whatsapp, message?: str
  * Función pura y reutilizable.
  */
 export function buildWhatsAppLink(designName: string): string {
-  return buildWhatsAppUrl(CONTACT.whatsapp, `Hola, me interesa el diseño: ${designName}`)
+  return buildWhatsAppUrl(
+    CONTACT.whatsapp,
+    `¡Hola, Floristería Rossi! Vi el diseño "${designName}" en su página web y me gustaría encargarlo. ¿Me podrían confirmar su precio y disponibilidad?`,
+  )
 }

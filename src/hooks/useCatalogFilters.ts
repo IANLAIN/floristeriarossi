@@ -4,9 +4,15 @@ import type { Category, Product, FilterValue } from '../types/catalog'
 
 export type { FilterValue }
 
+export interface CategoryWithCount extends Category {
+  count: number
+}
+
 export interface CatalogFilters {
-  /** Categorías que tienen al menos un producto (para mostrar en el filtro). */
-  categories: Category[]
+  /** Categorías que tienen al menos un producto, con su cantidad total. */
+  categories: CategoryWithCount[]
+  /** Cantidad total de diseños en el catálogo. */
+  totalProductsCount: number
   /** Categoría seleccionada ('all' = todo el catálogo). */
   activeCategory: FilterValue
   /** Productos filtrados según la categoría activa. */
@@ -24,8 +30,12 @@ export interface CatalogFilters {
 export function useCatalogFilters(): CatalogFilters {
   const [activeCategory, setActiveCategory] = useState<FilterValue>('all')
 
-  const categories = useMemo(
-    () => CATEGORIES.filter((category) => PRODUCTS.some((p) => p.categoryId === category.id)),
+  const categories = useMemo<CategoryWithCount[]>(
+    () =>
+      CATEGORIES.map((category) => ({
+        ...category,
+        count: PRODUCTS.filter((p) => p.categoryId === category.id).length,
+      })).filter((category) => category.count > 0),
     [],
   )
 
@@ -39,5 +49,12 @@ export function useCatalogFilters(): CatalogFilters {
     return CATEGORIES.find((c) => c.id === activeCategory)?.label ?? 'Catálogo'
   }, [activeCategory])
 
-  return { categories, activeCategory, filteredProducts, activeCategoryLabel, setActiveCategory }
+  return {
+    categories,
+    totalProductsCount: PRODUCTS.length,
+    activeCategory,
+    filteredProducts,
+    activeCategoryLabel,
+    setActiveCategory,
+  }
 }
