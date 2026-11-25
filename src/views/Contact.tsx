@@ -9,13 +9,13 @@ function Contact() {
   useDocumentTitle('Floristería Rossi - Contacto')
 
   return (
-    <section className="container-page flex flex-col items-center py-16 text-center sm:py-20">
+    <section className="container-page flex flex-col items-center py-8 text-center sm:py-14 lg:py-16">
       <SectionHeading
         title="Contáctanos"
         subtitle="Estamos listos para ayudarte a elegir el arreglo ideal."
       />
 
-      <div className="mt-10 grid w-full max-w-4xl grid-cols-1 justify-items-center gap-6 md:grid-cols-2">
+      <div className="mt-7 grid w-full max-w-4xl grid-cols-1 justify-items-center gap-4 sm:mt-10 sm:gap-6 md:grid-cols-2">
         {CONTACT_PROFILES.map((profile) => (
           <ContactProfileCard key={profile.name} profile={profile} />
         ))}
@@ -23,7 +23,11 @@ function Contact() {
 
       <Link
         to="/catalogo"
-        className={getButtonClasses({ variant: 'primary', size: 'md', className: 'mt-10' })}
+        className={getButtonClasses({
+          variant: 'primary',
+          size: 'md',
+          className: 'mt-8 text-sm sm:mt-10 sm:text-base',
+        })}
       >
         Ver catálogo
       </Link>

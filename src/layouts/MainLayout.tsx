@@ -7,9 +7,9 @@ interface MainLayoutProps {
 
 function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col bg-background font-sans text-neutral-800">
+    <div className="flex min-h-dvh w-full flex-col overflow-x-clip bg-background font-sans text-neutral-800">
       <Navbar />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 w-full">{children}</main>
     </div>
   )
 }

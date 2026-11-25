@@ -9,10 +9,14 @@
 
   html {
     @apply scroll-smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: clip;
   }
 
   body {
-    @apply bg-background font-sans text-neutral-800 antialiased;
+    @apply min-h-dvh bg-background font-sans text-neutral-800 antialiased;
+    overflow-x: clip;
     background-image: radial-gradient(circle at top, rgba(232, 162, 176, 0.10), transparent 28%),
       linear-gradient(180deg, rgba(251, 247, 240, 1), rgba(248, 242, 234, 1));
   }

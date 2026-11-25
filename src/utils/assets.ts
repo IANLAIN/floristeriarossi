@@ -5,21 +5,29 @@ export function getRouterBasename(): string | undefined {
   return undefined
 }
 
-export function assetUrl(path: string): string {
+export function assetUrl(path: string, withVersion = true): string {
   const normalizedPath = path.replace(/^\/+/, '')
   const routerBasename = getRouterBasename()
 
+  let resolvedUrl: string
   if (routerBasename) {
-    return `${routerBasename}/${normalizedPath}`
+    resolvedUrl = `${routerBasename}/${normalizedPath}`
+  } else {
+    const envBase = import.meta.env.BASE_URL
+    const basePath =
+      !envBase || envBase === './' || envBase === '.'
+        ? '/'
+        : envBase.endsWith('/')
+          ? envBase
+          : `${envBase}/`
+
+    resolvedUrl = `${basePath}${normalizedPath}`
   }
 
-  const envBase = import.meta.env.BASE_URL
-  const basePath =
-    !envBase || envBase === './' || envBase === '.'
-      ? '/'
-      : envBase.endsWith('/')
-        ? envBase
-        : `${envBase}/`
+  if (withVersion && !import.meta.env.DEV && typeof __APP_VERSION__ !== 'undefined') {
+    const separator = resolvedUrl.includes('?') ? '&' : '?'
+    return `${resolvedUrl}${separator}v=${__APP_VERSION__}`
+  }
 
-  return `${basePath}${normalizedPath}`
+  return resolvedUrl
 }

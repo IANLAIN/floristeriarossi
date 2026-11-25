@@ -13,9 +13,9 @@ function ContactProfileCard({ profile }: ContactProfileCardProps) {
 
   return (
     <article className="flex w-full max-w-sm flex-col items-center rounded-2xl bg-white p-5 text-center shadow-soft sm:p-6">
-      <div className="flex h-32 w-32 items-center justify-center overflow-hidden rounded-full bg-secondary/20 ring-4 ring-secondary/30 sm:h-40 sm:w-40">
+      <div className="relative flex h-28 w-28 shrink-0 items-center justify-center overflow-hidden rounded-full bg-secondary/20 ring-4 ring-secondary/30 sm:h-36 sm:w-36">
         {hasImageError ? (
-          <span className="font-serif text-4xl text-primary" aria-hidden="true">
+          <span className="font-serif text-3xl text-primary sm:text-4xl" aria-hidden="true">
             {profile.name.charAt(0)}
           </span>
         ) : (
@@ -26,16 +26,16 @@ function ContactProfileCard({ profile }: ContactProfileCardProps) {
             decoding="async"
             width="320"
             height="320"
-            className="h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
             onError={() => setHasImageError(true)}
           />
         )}
       </div>
 
-      <h2 className="mt-5 font-serif text-2xl text-primary">{profile.name}</h2>
-      {profile.role && <p className="mt-1 text-sm text-neutral-500">{profile.role}</p>}
+      <h2 className="mt-4 font-serif text-xl text-primary sm:mt-5 sm:text-2xl">{profile.name}</h2>
+      {profile.role && <p className="mt-1 text-xs text-neutral-500 sm:text-sm">{profile.role}</p>}
 
-      <div className="mt-5 flex items-center justify-center gap-3">
+      <div className="mt-4 flex items-center justify-center gap-3 sm:mt-5">
         <a
           href={buildWhatsAppUrl(profile.whatsapp)}
           target="_blank"

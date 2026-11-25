@@ -21,7 +21,7 @@ function CategoryFilter({ categories, activeCategory, onChange }: CategoryFilter
   )
 
   return (
-    <div className="flex flex-wrap justify-center gap-2">
+    <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2">
       {options.map((option) => {
         const isActive = activeCategory === option.id
         return (
@@ -30,7 +30,7 @@ function CategoryFilter({ categories, activeCategory, onChange }: CategoryFilter
             type="button"
             onClick={() => onChange(option.id)}
             aria-pressed={isActive}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
+            className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:px-4 sm:py-2 sm:text-sm ${
               isActive
                 ? 'bg-primary text-white shadow-soft'
                 : 'bg-white text-primary hover:bg-primary/10'

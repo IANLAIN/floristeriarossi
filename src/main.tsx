@@ -3,7 +3,10 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import { getRouterBasename } from './utils/assets'
+import { initVersionAutoRefresh } from './utils/versionCheck'
 import './index.css'
+
+initVersionAutoRefresh()
 
 const rootElement = document.getElementById('root')
 const routerBasename = getRouterBasename()

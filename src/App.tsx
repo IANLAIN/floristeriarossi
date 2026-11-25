@@ -1,17 +1,19 @@
-import { lazy, Suspense, useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import PageLoader from './components/common/PageLoader'
+import { checkForUpdates, lazyWithReload } from './utils/versionCheck'
 
-const Home = lazy(() => import('./views/Home'))
-const Catalog = lazy(() => import('./views/Catalog'))
-const Contact = lazy(() => import('./views/Contact'))
+const Home = lazyWithReload(() => import('./views/Home'))
+const Catalog = lazyWithReload(() => import('./views/Catalog'))
+const Contact = lazyWithReload(() => import('./views/Contact'))
 
 function ScrollToTop() {
   const { pathname } = useLocation()
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    void checkForUpdates()
   }, [pathname])
 
   return null

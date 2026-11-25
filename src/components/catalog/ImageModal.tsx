@@ -50,7 +50,7 @@ function ImageModal({ image, onClose }: ImageModalProps) {
         src={assetUrl(image.src)}
         alt={image.alt}
         decoding="async"
-        className="max-h-[82dvh] max-w-full rounded-xl object-contain shadow-2xl sm:max-h-[85vh]"
+        className="h-auto max-h-[82dvh] w-auto max-w-[calc(100vw-2rem)] rounded-xl object-contain shadow-2xl sm:max-h-[85dvh] sm:max-w-[90vw]"
       />
     </div>
   )
