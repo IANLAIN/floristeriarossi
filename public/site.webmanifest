@@ -1,0 +1,31 @@
+{
+  "name": "Floristería Rossi",
+  "short_name": "Rossi",
+  "description": "Catálogo de diseños florales en Cartago, Valle del Cauca.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF7F0",
+  "theme_color": "#6E1F2E",
+  "icons": [
+    {
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/rose.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

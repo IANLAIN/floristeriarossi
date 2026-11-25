@@ -7,9 +7,6 @@ function versionManifestPlugin(version: string): Plugin {
   return {
     name: 'version-manifest',
     apply: 'build',
-    transformIndexHtml(html) {
-      return html.replace(/href="\.\/rose\.png"/g, `href="./rose.png?v=${version}"`)
-    },
     generateBundle() {
       this.emitFile({
         type: 'asset',
@@ -23,7 +20,7 @@ function versionManifestPlugin(version: string): Plugin {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), versionManifestPlugin(appVersion)],
-  base: './',
+  base: '/',
   define: {
     __APP_VERSION__: JSON.stringify(appVersion),
   },
